@@ -1,0 +1,166 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.clr {
+    clear: both;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu {
+    width: 1300px;
+    height: 72px;
+    background: crimson;
+    margin: 0px auto;
+    font-family: Ubuntu, sans-serif;
+}
+
+.logo {
+    font-size: 35px;
+    padding: 15px 50px;
+    font-weight: 600;
+    display: inline-block;
+    float: left;
+}
+
+.logo a {
+    padding-right: 100px;
+    color: black;
+}
+
+.logo span {
+    color: white;
+}
+
+.menu ul li {
+    display: inline-block;
+    float: left;
+    padding-top: 23px;
+    position: relative;
+}
+
+.menu ul li a {
+    padding-left: 102px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+}
+
+.menu ul li ul {
+    display: inline-block;
+    position: absolute;
+    width: 280px;
+    left: 0;
+    top: 72px;
+    background: crimson;
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all linear .5s;
+    line-height: .9;
+    z-index: 5;
+}
+
+.menu ul li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.menu ul li ul li ul {
+    position: absolute;
+    left: 280px;
+    top: -45px;
+    /* transform: scaleY(0);
+    transition: all linear .5s; */
+}
+
+
+/* .menu ul li ul li>ul {
+    transform: scaleY(1);
+} */
+
+.banner {
+    background: url(image/ship.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner::after {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    background-color: rgba(169, 202, 22, 0.26);
+}
+
+.reg {
+    text-align: center;
+    padding-top: 75px;
+}
+
+.reg h2 {
+    position: relative;
+    font-size: 24px;
+    text-transform: uppercase;
+    display: inline-block;
+    border: 5px solid rgb(173, 157, 157);
+}
+
+.reg h2::before {
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    background: crimson;
+    content: '';
+    left: -55px;
+    top: 11px;
+}
+
+.reg h2::after {
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    background: crimson;
+    content: '';
+    left: 139px;
+    top: 11px;
+}
+
+.reg h2 span::before {
+    position: absolute;
+    height: 50px;
+    width: 5px;
+    background: crimson;
+    content: '';
+    left: 71px;
+    top: -60px;
+}
+
+.reg h2 span::after {
+    position: absolute;
+    height: 50px;
+    width: 5px;
+    background: crimson;
+    content: '';
+    left: 71px;
+    top: 30px;
+}
